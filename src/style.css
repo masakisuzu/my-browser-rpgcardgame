@@ -1,0 +1,169 @@
+
+#app {
+  /* 画面サイズ */
+  width: 960px;
+  height: 540px;
+
+  position: relative; /*子要素はこのapp(左上)を基準に配置される*/
+  border: 7px solid #000000;
+  margin: 0px;
+  overflow: hidden; /*Canavasからはみ出したら隠す*/
+}
+
+#canvas {
+    /* 親(app)にサイズに比率を合わせる*/
+    width: 100%;  
+    height: 100%;
+    
+    position: absolute;/* 親に従った配置に設定(左上から描画) */
+    top: 0;
+    left: 0;
+    z-index: 1;/* レイヤーの深さ、大きいほど上の層で優先 */
+}
+
+
+
+
+/* スタートボタンの基本的なスタイル */
+#startTrip-button {
+  padding: 10px 30px;
+  font-size: 25px;
+  cursor: pointer;
+  pointer-events: auto; /* ボタンの時は透過を解除*/
+
+  font-weight: bold;
+  border: 4px solid white;
+  background-color: black;
+  color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+
+  position: absolute; 
+  top: 200px;
+}
+
+#finishTrip-button {
+  padding: 10px 30px;
+  font-size: 25px;
+  cursor: pointer;
+  pointer-events: auto;
+
+  font-weight: bold;
+  border: 4px solid white;
+  background-color: black;
+  color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+
+  position: absolute; 
+  top: 470px;
+  left: 760px;
+}
+
+#continueTrip-button {
+  padding: 10px 30px;
+  font-size: 24px;
+  cursor: pointer;
+  pointer-events: auto;
+
+  font-weight: bold;
+  border: 4px solid white;
+  background-color: black;
+  color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+
+  position: absolute; 
+  top: 450px;
+}
+
+#encounter-button {
+  padding: 10px 30px;
+  font-size: 25px;
+  cursor: pointer;
+  pointer-events: auto;
+
+  font-weight: bold;
+  border: 4px solid white;
+  background-color: black;
+  color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+
+  position: absolute; 
+  top: 450px;
+}
+
+#title-button {
+  padding: 10px 30px;
+  font-size: 25px;
+  cursor: pointer;
+  margin-top: 50px;
+  pointer-events: auto;
+
+  font-weight: bold;
+  border: 4px solid white;
+  background-color: black;
+  color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+
+  position: absolute; 
+  top: 330px;
+}
+
+#shuffle-button {
+  padding: 4px 6px;
+  font-size: 12px;
+  cursor: pointer;
+  pointer-events: auto;
+
+  font-weight: bold;
+  border: 3px solid white;
+  background-color: black;
+  color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+
+  position: absolute; 
+  top: 400px;
+  left: 10px;
+}
+
+#secret-button {
+  padding: 20px 40px;
+  font-size: 25px;
+  cursor: pointer;/* 透明でもカーソルアイコンが変わってちょっとしたヒントに */
+  pointer-events: auto;
+
+  /* 色々透明 */
+  background-color: transparent;
+  border: none;
+  color: transparent;
+
+  /* 座標指定のために絶対配置を有効にする。親要素 #title-ui が flexbox なので、
+     flexboxの中央寄せの影響を受けないようにするために必須らしい */
+  position: absolute; 
+  top: -10px;
+  left: -10px;
+}
+
+/* 非表示にするためのクラス */
+.hidden {
+  display: none !important;
+}
+
+/*これがないとボタンが配置されないよ*/
+#title-ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    z-index: 10;
+
+    /* 透明の壁を高めのレイヤー層（z-index）で貼っている。だけどマウス入力は通させるたい
+    マウスクリックイベントを透過させる設定としてnone。
+    下のレイヤーだけでなく、同じレイヤーのボタン達も貫通してしまうがそこは各ボタンで拾うよう設定している */
+    pointer-events: none;
+
+    /* ボタンを中央寄せに配置する */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
