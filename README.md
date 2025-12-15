@@ -10,9 +10,9 @@ Vite + TypeScript で制作したブラウザ向けカードRPGゲームです�
 - 公開URLにアクセスするとブラウザでそのまま遊べます
 - マウス操作
 
-## 🔧 開発環境
-- Vite
-- TypeScript
+## 🔧 アセット
+- 背景：gemini
+- イラスト：DOT-ILLUST
 
 ## ⚠ 注意
 
