@@ -1,18 +1,20 @@
 # 戦え勇者たち
-
 Vite + TypeScript で制作したブラウザ向けカードRPGゲームです。
+
+- https://masakisuzu.github.io/my-browser-rpgcardgame/
+- 公開URLにアクセスするとブラウザでそのまま遊べます
 
 ## 📕 概要
 - カジュアルなカード戦略RPG
 - すべては「カード」で動く！
 
 ## 🎮 遊び方
-- 公開URLにアクセスするとブラウザでそのまま遊べます
-- マウス操作
+- カードを「ドラッグ＆ドロップ」して勇者にカードを与えよう！
 
 ## 🔧 アセット
-- 背景：gemini
-- イラスト：DOT-ILLUST
+- 背景：Gemini
+- ドット画像：DOT-ILLUST
+- サウンド画像：シルエットAC
 
 ## ⚠ 注意
 
